@@ -4,10 +4,11 @@ services:
     restart: always
 
   weather:
-    image: weather:latest
+    image: ghcr.io/valentin2105/weather-pyapp:latest
     build: .
     depends_on:
       - redis
     restart: always
     ports:
       - "80:80"
+
